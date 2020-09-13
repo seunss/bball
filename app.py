@@ -104,7 +104,6 @@ def get_image(player_id):
         return send_file(safe_path)
     except FileNotFoundError:
         abort(404)
-        return player.imageLoc
 
 
 
