@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import request, jsonify, redirect, url_for, flash, render_template, send_file, safe_join, abort
+from flask import request, jsonify, redirect, url_for, flash, render_template, send_file, safe_join, abort, send_from_directory
 from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -50,7 +50,8 @@ class PlayersModel(db.Model):
 @app.route('/')
 def test():
      safe_path = safe_join(app.config["UPLOAD_FOLDER"], 'testimage.jpg')
-     return send_file(safe_path)
+     return  send_from_directory(app.config['UPLOAD_FOLDER'],
+                               'testimage.jpg')
 
 @app.route('/addplayer', methods = ['POST'])
 def add_player():
