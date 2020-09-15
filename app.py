@@ -14,7 +14,7 @@ migrate = Migrate(app, db)
 
 # Allow only pictures to be uploaded
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
-UPLOAD_FOLDER = './static/images'
+UPLOAD_FOLDER = 'static/images'
 #UPLOADS_PATH = join(dirname(realpath(__file__)), 'static/uploads/')
 
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
@@ -50,8 +50,7 @@ class PlayersModel(db.Model):
 @app.route('/')
 def test():
      safe_path = safe_join(app.config["UPLOAD_FOLDER"], 'testimage.jpg')
-     return  send_from_directory(app.config['UPLOAD_FOLDER'],
-                               'testimage.jpg')
+     return  send_from_directory(app.config['UPLOAD_FOLDER'],'testimage.jpg')
 
 @app.route('/addplayer', methods = ['POST'])
 def add_player():
