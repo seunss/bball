@@ -50,6 +50,7 @@ class PlayersModel(db.Model):
 @app.route('/')
 def test():
      safe_path = safe_join(app.config["UPLOAD_FOLDER"], 'testimage.jpg')
+     print(os.getcwd())
      return  send_from_directory(app.config['UPLOAD_FOLDER'],'testimage.jpg')
 
 @app.route('/addplayer', methods = ['POST'])
