@@ -45,7 +45,10 @@ class PlayersModel(db.Model):
 
 
 
-
+@app.route('/')
+def test():
+     safe_path = safe_join(app.config["UPLOAD_FOLDER"], 'testimage.jpg')
+     return send_file(safe_path)
 
 @app.route('/addplayer', methods = ['POST'])
 def add_player():
@@ -59,15 +62,33 @@ def add_player():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             print("seun")
             data = request.form
-            newCar = PlayersModel(
+            newPlayer = PlayersModel(
                 name=data['name'], sport=data['sport'], skillLevel=data['skill'], imageLoc=  filename)
-            db.session.add(newCar)
+            db.session.add(newPlayer)
             db.session.commit()
             return jsonify( "player successfully")
         
             
+@app.route('/allplayers',methods = ['GET'])
+def get_all():
+     if request.method == 'GET':
+        players = PlayersModel.query.all()
 
-@app.route('/players/<player_id>', methods=['GET', 'PUT', 'DELETE'])
+            
+        
+        
+
+        results = [
+            {
+                "name": player.name,
+                "model": player.sport,
+                "skill": player.skillLevel,
+                "id": players.id
+            } for player in players]
+        return jsonify(results)
+
+
+@app.route('/players/<player_id>', methods=['GET', 'PUT', 'DELETE']) # Getting a single players info
 def handle_player(player_id):
     player = PlayersModel.query.get_or_404(player_id)
 
@@ -75,7 +96,8 @@ def handle_player(player_id):
         response = {
             "name": player.name,
             "sport": player.sport,
-            "skill": player.skillLevel
+            "skill": player.skillLevel,
+            "imageLoc": player.id
         }
         return {"message": "success", "player": response}
 
@@ -94,7 +116,7 @@ def handle_player(player_id):
         return {"message": f"Player {player.name} successfully deleted."}
 
 
-@app.route('/iamges/<player_id>', methods=['GET'])
+@app.route('/iamges/<player_id>')
 def get_image(player_id):
     player = PlayersModel.query.get_or_404(player_id)
 
