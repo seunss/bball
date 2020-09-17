@@ -50,8 +50,8 @@ class PlayersModel(db.Model):
 @app.route('/')
 def test():
      safe_path = safe_join(app.config["UPLOAD_FOLDER"], 'testimage.jpg')
-     print(os.getcwd())
-     return  send_from_directory(app.config['UPLOAD_FOLDER'],'testimage.jpg')
+     #print(os.getcwd())
+     return  send_file(safe_path)
 
 @app.route('/addplayer', methods = ['POST'])
 def add_player():
@@ -100,7 +100,7 @@ def handle_player(player_id):
             "name": player.name,
             "sport": player.sport,
             "skill": player.skillLevel,
-            "imageLoc": player.id
+            "playerID": player.id
         }
         return {"message": "success", "player": response}
 
@@ -119,7 +119,7 @@ def handle_player(player_id):
         return {"message": f"Player {player.name} successfully deleted."}
 
 
-@app.route('/iamges/<player_id>')
+@app.route('/images/<player_id>')
 def get_image(player_id):
     player = PlayersModel.query.get_or_404(player_id)
 
