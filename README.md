@@ -92,9 +92,9 @@ NBA IMAGE Repo, Images are grouped by team
 
 ### Built With
 
-* []()
-* []()
-* []()
+* []()Python
+* []()MongoDB
+* []()Pymongo
 
 
 
