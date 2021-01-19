@@ -163,7 +163,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@lawalseun33](https://twitter.com/lawalseun33) - wale.lawal98@gmail.com
+Seun Lawal - [@lawalseun33](https://twitter.com/lawalseun33) - wale.lawal98@gmail.com
 
 Project Link: [https://github.com/seunss/ball](https://github.com/seunss/bball)
 
