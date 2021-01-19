@@ -187,10 +187,10 @@ Project Link: [https://github.com/seunss/ball](https://github.com/seunss/bball)
 [forks-shield]: https://img.shields.io/github/forks/seunss/repo.svg?style=for-the-badge
 [forks-url]: https://github.com/seunss/bball/network/members
 [stars-shield]: https://img.shields.io/github/stars/seunss/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/seunss/repo/stargazers
+[stars-url]: https://github.com/seunss/bball/stargazers
 [issues-shield]: https://img.shields.io/github/issues/seunss/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/seunss/repo/issues
+[issues-url]: https://github.com/seunss/bball/issues
 [license-shield]: https://img.shields.io/github/license/seunss/repo.svg?style=for-the-badge
-[license-url]: https://github.com/seunss/repo/blob/master/LICENSE.txt
+[license-url]: https://github.com/seunss/bball/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/seun-lawal
