@@ -65,7 +65,7 @@ def add(teamName, folderName):
     fName = createFolder(folderName)
 
     print('A folder has been created at the location', fName)
-    print('Please copy all of the image memes that you would like to add into this repository and paste them into the input folder.')
+    print('Please copy all of the images  that you would like to add into this repository and paste them into the input folder.')
     print('It is very important that you COPY your files instead of moving them as this folder is temportary will be deleted.')
     print('When you are finished inserting your images into the folder, please enter \'done\' to continue or \'cancel\' to cancel this action.')
     print()
@@ -112,10 +112,10 @@ def add(teamName, folderName):
 
         print('You have inserted', len(imagesToAdd),
               'image(s) into the repository.')
-        print()
+
     else:
-        print('This action has been cancelled.')
-        print()
+        print('This action has been terimated.')
+       
 
     deleteFolder(folderName)
 
@@ -174,7 +174,7 @@ def delete(teamName, folderName):
 
     print('A folder has been created at the location', fName)
     print('This folder contains all of the images in the repository that are for this team.')
-    print('To delete an image from the repository, all you have to do is delete it from the folder.')
+    print('To delete an image from the repository, all you have to do is remove it from the folder.')
     print('When you are done deleting your images, please enter \'done\' to continue or \'cancel\' to cancel this action.')
     print()
 

@@ -32,7 +32,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/seunss/ball">
+  <a href="https://github.com/seunss/bball">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -115,7 +115,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/seunss/ball.git
+   git clone https://github.com/seunss/bball.git
    ```
 2. Install Requirments
    ```sh
@@ -127,16 +127,15 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+Used to store images.
+Each team has its on set of photos. The photos can be private and only accesed by the team, or public and accessed by Anyone
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/seunss/ball/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/seunss/bball/issues) for a list of proposed features (and known issues).
 
 
 
@@ -165,7 +164,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Seun Lawal - [@lawalseun33](https://twitter.com/lawalseun33) - wale.lawal98@gmail.com
 
-Project Link: [https://github.com/seunss/ball](https://github.com/seunss/bball)
+Project Link: [https://github.com/seunss/bball](https://github.com/seunss/bball)
 
 
 
