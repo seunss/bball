@@ -5,7 +5,7 @@ import datetime
 import base64
 import shutil
 
-client = pymongo.MongoClient()
+client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client['nbaImages']
 imageRepo = db['imageRepo']
 
@@ -57,7 +57,7 @@ def add(teamName, folderName):
         elif (command == 'private'):
             isPublic = False
         else:
-            valid = False
+            invalid = True
             print('\'' + command + '\'',
                   'is not a valid input, please enter  \'public\' or \'private\'')
             print()
